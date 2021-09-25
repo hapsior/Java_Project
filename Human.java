@@ -10,11 +10,15 @@ public class Human {
     public List<Animal> animals= new ArrayList<Animal>();
     public double money;
     public Dog dog;
-    public Human(String _firstName,String _lastName,int _age,double _money){
-        this.firstName=_firstName;
-        this.lastName=_lastName;
-        this.age=_age;
-        this.money=_money;
+    public String login;
+    public String password;
+    public Human(String firstName,String lastName,int age,double money,String login,String password){
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.age=age;
+        this.money=money;
+        this.login=login;
+        this.password=password;
     }
     public void addAnimalToFarm(Animal animal){
         this.animals.add(animal);

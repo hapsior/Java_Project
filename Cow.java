@@ -2,12 +2,12 @@ package com.company;
 
 public class Cow extends Animal{
 
-    public Cow(String _name, boolean _isOutside, boolean _isAlive, double _weight,Human _owner) {
-        super(_name, _isOutside, _isAlive, _weight,_owner);
-        this.setName(_name);
-        this.isOutside=_isOutside;
+    public Cow(String name, boolean isOutside, boolean isAlive, double weight,Human owner) {
+        super(name, isOutside, isAlive, weight,owner);
+        this.setName(name);
+        this.isOutside=isOutside;
         this.isAlive=true;
-        this.weight=_weight;
+        this.weight=weight;
     }
 
 }

@@ -9,18 +9,19 @@ public abstract class Animal {
     public final String[] formeTypes={"House","Stable","Cowshed"};
     private Object animal;
     public Human owner;
-    public Animal(String _name,boolean _isOutside,boolean _isAlive,double _weight,Human _owner){
-        this.name=_name;
-        this.isOutside=_isOutside;
-        this.isAlive=_isAlive;
-        this.weight=_weight;
-        this.owner=_owner;
+    public Animal(String name,boolean isOutside,boolean isAlive,double weight,Human owner){
+        this.name=name;
+        this.isOutside=isOutside;
+        this.isAlive=isAlive;
+        this.weight=weight;
+        this.owner=owner;
     }
     public String getName(){
         return name;
     }
-    public void setName(String _name){
-        this.name=_name;
+    public void setName(String name){
+
+        this.name=name;
     }
     public void feed(){
         if(weight>100){
@@ -63,6 +64,7 @@ public abstract class Animal {
         return weight;
     }
     public void sellAnimal(Human seller, Human buyer,double price){
+
         if(buyer.money>price&&owner==seller){
             buyer.addAnimalToFarm((Animal) animal);
             owner=buyer;
