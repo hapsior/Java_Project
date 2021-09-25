@@ -24,15 +24,18 @@ public class Main {
         farmer2.animals.add(cow2);
         farmer2.animals.add(horse2);
         farmer.addAnimalToFarm((Animal) dog);
-        farmer.checkAnimal((Animal)dog);
+        farmer.CheckAnimal((Animal)dog);
 
         List<Human> humanList=new ArrayList<Human>();
         humanList.add(farmer);
         humanList.add(farmer2);
-        dog.sellAnimal(farmer,farmer2,1000);
-        farmer2.checkAnimal(dog);
+        dog.SellAnimal(farmer,farmer2,1000);
+        farmer2.CheckAnimal(dog);
         Scanner input=new Scanner(System.in);
         String select = "";
+
+        System.out.println(farmer.DisplayAnimals());
+
         while(!select.equals("2"))
         {
             System.out.println("1.Log in!\n2.Exit");

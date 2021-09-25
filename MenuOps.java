@@ -28,16 +28,18 @@ public class MenuOps {
             }
         }
     }
-public void Submenu(){
+public void Submenu(String login){
 
     Scanner input=new Scanner(System.in);
+    HumanMenu humanMenu=new HumanMenu();
+
     String select = "";
     while(!select.equals("0")) {
         System.out.println("1.Sell Animal\n2.Buy Animal\n3.Take Animal Outside\n4.Take Animal Inside\n\n0.Exit to login screen");
         select=input.nextLine();
         switch (select) {
             case "1":
-                //TODO SellAnimal()
+                humanMenu.SellAnimal(login);
                 break;
             case "2":
                 //TODO BuyAnimal()

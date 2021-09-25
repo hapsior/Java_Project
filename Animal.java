@@ -60,10 +60,10 @@ public abstract class Animal {
             System.out.println("Still lives");
         }
     }
-    public double getWeight(){
+    public double GetWeight(){
         return weight;
     }
-    public void sellAnimal(Human seller, Human buyer,double price){
+    public void SellAnimal(Human seller, Human buyer, double price){
 
         if(buyer.money>price&&owner==seller){
             buyer.addAnimalToFarm((Animal) animal);
@@ -76,3 +76,4 @@ public abstract class Animal {
         }
     }
 }
+

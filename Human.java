@@ -23,20 +23,28 @@ public class Human {
     public void addAnimalToFarm(Animal animal){
         this.animals.add(animal);
     }
-    public void checkAnimal(Animal animal){
+    public void CheckAnimal(Animal animal){
             System.out.println(animal.getName());
             System.out.println(animal.isOutside);
             animal.isAnimalAlive();
-            System.out.println(animal.getWeight());
+            System.out.println(animal.GetWeight());
 
 
     }
-    public boolean checkAnimalAvailability(Animal animal){
+    public boolean CheckAnimalAvailability(Animal animal){
         for (int i = 0; i < animals.size() ; i++) {
             if(animals.get(i) ==animal){
                 return true;
             }
         }
             return false;
+    }
+
+    public List<String> DisplayAnimals(){
+        List<String> animalList=new ArrayList<>();
+        for (int i = 0; i < animals.size(); i++) {
+            animalList.add(animals.get(i).getClass().getSimpleName().toString()  + " " + animals.get(i).getName());
+        }
+            return animalList;
     }
 }
